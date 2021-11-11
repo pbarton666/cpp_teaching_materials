@@ -103,8 +103,8 @@ std::cout << "zz from conditional expression: " + std::to_string(zz)  << std::en
 
 std::cout << "t from conditional expression: " + std::to_string(t)  << std::endl;
 
-// The idea is that these can be embedded anywhere
-// ( xx > yy ) ? xx : yy
+// The idea is that these can be embedded anywhere, like a lambda.
+// ( xx > yy ) ? xx : yy:
 
 std::cout << "The biggest number is " + std::to_string(  (xx > yy ) ? xx : yy   );
 
