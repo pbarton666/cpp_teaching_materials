@@ -38,12 +38,6 @@ int main(){
     float f{5.0};  // '.0' and no suffix = float
     double d{6.0f}; // '.0' and 'f' suffix = double 
 
-    // Print values don't always reflect stored \
-       values\
-       etc
-
-    
-
     // floats have 6  digits of precision on output
 
     // To increse, set a manipulator / std::setprecision(15) from <iomanip> header
