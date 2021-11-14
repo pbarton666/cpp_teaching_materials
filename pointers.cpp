@@ -1,6 +1,17 @@
 #include <iostream>
 #include <string>
 
+
+
+
+
+
+
+
+
+
+
+
 void pointer(){
     // show off some pointer tricks
 
