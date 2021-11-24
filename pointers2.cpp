@@ -57,6 +57,11 @@ void main(){
     for(int i=0; i<sizeof(red)/sizeof(red[0]); i++)
         cout << red[i] << endl;
 
+    // parallel index and ponter operations
+    cout << "The last red bottle as red[2]  " << red[2] << endl;
+    cout << "The last red bottle via pointer " << *(red +2) << endl;
+
+
 }
 
 
