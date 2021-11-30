@@ -3,7 +3,53 @@
 
 int main()
 {
-    // While loop
+    // For loop  ()
+
+    // for ( <loop index init ; index check; update index) {
+    //     <do stuff>
+    // }
+    std::cout << "For loop output"  << std::endl;
+    for ( int i = 0; i < 10; ++i ) {
+        std::cout << i+1 << std::endl;  // reports but does not change i
+    }
+    std::cout << std::endl;
+
+    // For loop with break (allows tautologically true condition)
+
+    std::cout << "For loop with break output"  << std::endl;
+    for ( int i = 0; i < 10; ++i ) {
+        std::cout << i+1 << std::endl;  // reports but does not change i
+        break;
+    }
+
+    std::cout << "For loop with continue"  << std::endl;
+    for ( int i = 0; i < 10; ++i ) {
+        std::cout << "about to hit continue\t";
+        continue;
+        std::cout << i+1 << std::endl;  // reports but does not change i
+        break;
+    }
+    std::cout << std::endl;
+
+
+
+    // Nested loops.   NB looping vars can be sensible.  
+
+    int cols {4};
+    int rows {3};
+
+    std::cout << "Array with element indices as values: \n";
+    for (int col = 0; col <= cols; col++ ) {
+        for (int row = 0; row <= rows; row++) {
+             std::cout << std::to_string(col) + std::to_string(row) + "  ";
+        }
+        std::cout << std::endl;     
+    }
+
+    // For v/ while discussion;   known or unknown elements?   Complexity of update logic?
+    // Clarity for you and readers?
+
+// While loop
 
     /* Syntax (NB: single line of 'stuff' does not require {}):
         while ( <condition is true> ) {
@@ -47,40 +93,5 @@ int main()
 
 
 
-    // For loop  ()
-
-    // for ( <loop index init ; index check; update index) {
-    //     <do stuff>
-    // }
-    std::cout << "For loop output"  << std::endl;
-    for ( int i = 0; i < 10; ++i ) {
-        std::cout << i+1 << std::endl;  // reports but does not change i
-    }
-    std::cout << std::endl;
-
-    // For loop with break (allows tautologically true condition)
-
-    std::cout << "For loop with break output"  << std::endl;
-    for ( int i = 0; i < 10; ++i ) {
-        std::cout << i+1 << std::endl;  // reports but does not change i
-        break;
-    }
-    std::cout << std::endl;
-
-    // Nested loops.   NB looping vars can be sensible.  
-
-    int cols {4};
-    int rows {3};
-
-    std::cout << "Array with element indices as values: \n";
-    for (int col = 0; col <= cols; col++ ) {
-        for (int row = 0; row <= rows; row++) {
-             std::cout << std::to_string(col) + std::to_string(row) + "  ";
-        }
-        std::cout << std::endl;     
-    }
-
-    // For v/ while discussion;   known or unknown elements?   Complexity of update logic?
-    // Clarity for you and readers?
-
+    
 }

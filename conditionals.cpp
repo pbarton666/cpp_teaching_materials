@@ -3,6 +3,10 @@
 
 int main()
 {
+    // code blocks can be null"
+    if (1==2){}
+        else if (1==2){}
+
     // Comparisons use infix notation
     /*   ==  !=   >=   <=   !true */
         int x ( 3 );
