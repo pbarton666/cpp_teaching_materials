@@ -1,35 +1,34 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int main()
 {
     // For loop  ()
 
-    // for ( <loop index init ; index check; update index) {
-    //     <do stuff>
-    // }
-    std::cout << "For loop output"  << std::endl;
+    cout << "For loop output"  << endl;
     for ( int i = 0; i < 10; ++i ) {
-        std::cout << i+1 << std::endl;  // reports but does not change i
+        cout << i+1 << endl;  // reports but does not change i
     }
-    std::cout << std::endl;
+    cout << endl;
 
     // For loop with break (allows tautologically true condition)
 
-    std::cout << "For loop with break output"  << std::endl;
+    cout << "For loop with break output"  << endl;
     for ( int i = 0; i < 10; ++i ) {
-        std::cout << i+1 << std::endl;  // reports but does not change i
+        cout << i+1 << endl;  // reports but does not change i
         break;
     }
 
-    std::cout << "For loop with continue"  << std::endl;
+    cout << "For loop with continue"  << endl;
     for ( int i = 0; i < 10; ++i ) {
-        std::cout << "about to hit continue\t";
+        cout << "about to hit continue\t";
         continue;
-        std::cout << i+1 << std::endl;  // reports but does not change i
+        cout << i+1 << endl;  // reports but does not change i
         break;
     }
-    std::cout << std::endl;
+    cout << endl;
 
 
 
@@ -38,12 +37,12 @@ int main()
     int cols {4};
     int rows {3};
 
-    std::cout << "Array with element indices as values: \n";
+    cout << "Array with element indices as values: \n";
     for (int col = 0; col <= cols; col++ ) {
         for (int row = 0; row <= rows; row++) {
-             std::cout << std::to_string(col) + std::to_string(row) + "  ";
+             cout << to_string(col) + to_string(row) + "  ";
         }
-        std::cout << std::endl;     
+        cout << endl;     
     }
 
     // For v/ while discussion;   known or unknown elements?   Complexity of update logic?
@@ -58,10 +57,10 @@ int main()
     */
    int a {-2};
    while (a){     //eval at top
-       std::cout << "'while' sentinal value is now: " + std::to_string(a) << std::endl;
+       cout << "'while' sentinal value is now: " + to_string(a) << endl;
        a += 1;
    }
-    std::cout << std::endl;
+    cout << endl;
 
 
    // Do While loop
@@ -74,22 +73,22 @@ int main()
     int b{-2};
     do {
         b++;
-      std::cout << "'do while' sentinal value is now: " + std::to_string(b) << std::endl;
+      cout << "'do while' sentinal value is now: " + to_string(b) << endl;
     }  while (b);   //eval at bottom - goes at least once
     
-    std::cout << std::endl;
+    cout << endl;
     
     // While with break
 
     int c {-2};
     while (c){     //eval at top
         a += 1;
-        std::cout << "'while' sentinal value is now: " + std::to_string(c) << std::endl;
-        std::cout << "Taking a break ..." + std::to_string(c) << std::endl;
+        cout << "'while' sentinal value is now: " + to_string(c) << endl;
+        cout << "Taking a break ..." + to_string(c) << endl;
         break;
    }  
 
-    std::cout << std::endl;
+    cout << endl;
 
 
 

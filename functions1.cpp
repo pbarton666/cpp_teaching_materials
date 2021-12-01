@@ -1,16 +1,6 @@
 #include <iostream>
 #include <string>
 
-
-    // A function is an isolated piece of code with its own namespace.   You can 
-    //  optinally pass it arguments, describe some processing, and return something.
-    //
-    // Syntax:  
-    //    <return_type>  <function name>  ( <comma-separated args>) {
-    //        <some stuff>              
-    //     }
-
-
 // Here's a custom function 
 int addInts(int arg1, int arg2) 
 {
@@ -19,7 +9,6 @@ int addInts(int arg1, int arg2)
         return sum;  // not needed if return type is void
 }
 
-// main() is a special case of a function (cf. below).   Parameters are optiona.
 int main(){
     
     int a{2};
@@ -40,20 +29,5 @@ int main(){
     
 }
 
-// alt main signature:
-// int main (int argc, char * const arvg[])
-//    NB main() would need a return statement
-
-// Declarations versus Definitins
-
-    // Declaration   NB semicolon follows statement.   --> namespace:
-    //   If
-    // int myfunct();   OR  int myfunct(int, int);   OR int myfunct(int&, int&)  
-    //    NB arg types are just documentation unless passed by reference w/ address`
-
-    // Definition:
-    // int myfunct(){
-    //      int blah;    
-    //      }
 
 

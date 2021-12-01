@@ -10,6 +10,7 @@ using std::ofstream;
 using std::ifstream;
 using std::fstream;
 using std::string;
+using std::flush;
 
 int writeMary(string fn){
     // write a text file
@@ -22,6 +23,7 @@ int writeMary(string fn){
         myfile << "little lamb \nlittle lamb\nlittle lamb\n";
         myfile << "Mary had a little lamb \n";
         myfile << "whose fleece was white as snow.";
+        myfile << flush;
         myfile.close();
     }
     else cout << "Unable to open file";

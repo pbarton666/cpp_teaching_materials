@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int main()
 {
     // code blocks can be null"
@@ -9,82 +11,89 @@ int main()
 
     // Comparisons use infix notation
     /*   ==  !=   >=   <=   !true */
-        int x ( 3 );
+    int x ( 3 );
 
     // Code block for passing test can be a single line
     if (x == 7) 
-        std::cout << "We match!  Yay.";
+        cout << "We match!  Yay.";
 
-    std::cout << "\n ***** \n"  << std::endl;
+    cout << "\n ***** \n"  << endl;
 
     // Braces are recommended, even for single lines
     if (x != 7) {
-        std::cout << "We don't match!" << std::endl;
-        std::cout << "bummer, man!"  << std::endl;
+        cout << "We don't match!" << endl;
+        cout << "bummer, man!"  << endl;
     }  
+
+   cout << "\n ***** \n"  << endl;
+   
+   // conditions can be made with logical ops 
+   x = 6;
+   if ( ( !(x % 2) || (x % 3) )  && (x > 5 ) ){
+       cout << "Yea!  Complexity rocks.";
+   }
     
-    
-    std::cout << "\n ***** \n"  << std::endl;
+    cout << "\n ***** \n"  << endl;
     
     // The else clause is optional
     if (x == 7){
-        std::cout << "We still match!" << std::endl;
+        cout << "We still match!" << endl;
     }
     else {
-        std::cout << "We still did not match."  << std::endl;
+        cout << "We still did not match."  << endl;
     }
 
 
 
-    std::cout << "\n ***** \n"  << std::endl;
+    cout << "\n ***** \n"  << endl;
 
     // We can nest to an arbitrary level
     if (x == 7){
-        std::cout << "We still match! \n"  << std::endl;
+        cout << "We still match! \n"  << endl;
     }
     else {
         if (x == 5){
-            std::cout << "We matched at 5"  << std::endl;
+            cout << "We matched at 5"  << endl;
         }
         else {
             if (x == 3) {
-                std::cout << "We matched at 3."  << std::endl;
+                cout << "We matched at 3."  << endl;
             }
             else {
-                std::cout << "We still did not match."  << std::endl;
+                cout << "We still did not match."  << endl;
             }
         }
     }
 
-    std::cout << "\n ***** \n"  << std::endl;
+    cout << "\n ***** \n"  << endl;
 
     // We can use else if to tighten things up a bit.
 
     if (x == 7){
-        std::cout << "We still match! \n"  << std::endl;
+        cout << "We still match! \n"  << endl;
     }   else if (x == 5){
-            std::cout << "We matched at 5"  << std::endl;
+            cout << "We matched at 5"  << endl;
     }   else if (x == 3) {
-            std::cout << "We matched at 3."  << std::endl;
+            cout << "We matched at 3."  << endl;
     }   else {
-            std::cout << "We still did not match."  << std::endl;
+            cout << "We still did not match."  << endl;
     }
  
 
-    std::cout << "\n ***** \n"  << std::endl;
+    cout << "\n ***** \n"  << endl;
 
     // Switch.   NB no 'case level' code blocks.   Need break.
     //   No need to nest.  BUT switch condition only works with int and char constants
     int a { 1 };
     switch (a) {
         case 1:
-            std::cout << "Case matched at 1."  << std::endl;
+            cout << "Case matched at 1."  << endl;
             break;
         case 2:
-            std::cout << "Case matched at 2."  << std::endl;
+            cout << "Case matched at 2."  << endl;
             break;
         default:
-            std::cout << "Case did not match."  << std::endl;
+            cout << "Case did not match."  << endl;
             break;
     }
 
@@ -94,17 +103,17 @@ int main()
 
     switch (critter) {
         case Cat:
-            std::cout << "Cat says 'derp'"  << std::endl;
+            cout << "Cat says 'derp'"  << endl;
             break;
         case Dog:
-            std::cout << "Dog says 'WOOF!'"  << std::endl;
+            cout << "Dog says 'WOOF!'"  << endl;
             break;
         case Wolf:
-            std::cout << "Wolf says Awwwwwoooo'"  << std::endl;
+            cout << "Wolf says Awwwwwoooo'"  << endl;
             break;
 
     default:
-            std::cout << "Sorry, we don't know your critter."  << std::endl;
+            cout << "Sorry, we don't know your critter."  << endl;
             break;
     }
 
@@ -119,7 +128,7 @@ int main()
     int zz = ( xx > yy ) ? xx : yy;
 
 
-    std::cout << "zz from conditional expression: " + std::to_string(zz)  << std::endl;
+    cout << "zz from conditional expression: " + to_string(zz)  << endl;
     //this is equivalent to:
     int u { 2 };
     int v { 3 };
@@ -129,11 +138,11 @@ int main()
     else
         t = v;
 
-    std::cout << "t from conditional expression: " + std::to_string(t)  << std::endl;
+    cout << "t from conditional expression: " + to_string(t)  << endl;
 
     // The idea is that these can be embedded anywhere
     // ( xx > yy ) ? xx : yy
 
-    std::cout << "The biggest number is " + std::to_string(  (xx > yy ) ? xx : yy   );
+    cout << "The biggest number is " + to_string(  (xx > yy ) ? xx : yy   );
 
 }
