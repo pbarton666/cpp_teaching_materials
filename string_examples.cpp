@@ -1,7 +1,8 @@
 // string_examples.cpp
 
 #include <iostream>
-#include <cstring>
+#include <string>
+
 using namespace std;
 
 int main()
@@ -40,11 +41,14 @@ int main()
 	// replace a portion of string s1
 	// replace(pos, length_of_portion, string_to_replace)
     string s3 = "00000";
-	cout << s3.replace(1, 3, "YAY") << endl;  // replace (<pos>, <len>, <new>)
+	cout << s3.replace(1, 3, "_YAY_") << endl;  // replace (<pos>, <len>, <new>)
 
-
-
-    //Note:  <cstring>  has strlen, strcpy, strcat, strcomp methods.
-  
+	// delete a section of the string
+	string s4 = "Grateful Dead";
+	string delimiter = " ";
+	size_t pos4 = s4.find(delimiter);
+	s4.erase(0, pos4 + delimiter.length());
+	cout << "the original has been changed in place: " << s4 << endl;
+    
 	return 0;
 }

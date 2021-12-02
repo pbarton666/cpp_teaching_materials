@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <cstring>
+#include <string>
+
 using namespace std;
 
 int main() {
@@ -30,6 +32,9 @@ int main() {
     exint = int(mydouble);   // functional notation
     // or (int) mydouble - this is C-like
     cout << typeid(exint).name()  << " " << exint<< endl;
+
+    // string to integer using built-in
+    cout << stoi("123") << endl;
   
 	return 0;
 }
