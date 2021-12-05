@@ -3,6 +3,15 @@
 int main(){
     // Integers
 
+    // infer data type
+    auto xx = 4;   //i(nt)
+    auto yy = 1.23; //d(ouble)
+    auto ptr = &xx; //P(outer to)i(nteger)
+
+    decltype(xx+yy) zz;  // works with any function return
+    std::cout << "zz is: " << zz << " type: " << typeid(zz).name() << std::endl;
+    
+
     // short is normally defined as a 16-bit integer.
     signed short int varName1;  // stores from -32768 to +32767
     signed short varName2;  // same as signed short int

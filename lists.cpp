@@ -13,12 +13,11 @@
 #include <algorithm>
 #include <string>
 
-using std::cout;
-using std::endl;
+using namespace std;
 
 void makeList(){
     // make empty list and fill elements one at a time
-    std::list<int> aList;
+    list<int> aList;
     for (int i=0; i<10; i++)
         aList.push_back(i);
 
@@ -30,7 +29,7 @@ void makeList(){
 void initList(){
     // initialize with fill constructor
     // Syntax:   list<element_type>  <name> (<#_elements, <value>)
-    std::list<int> aList(3, 667);
+    list<int> aList(3, 667);
     for (int val : aList)
         cout << val << "   ";
     cout << endl;
@@ -38,7 +37,7 @@ void initList(){
 
 void loadList(){
     // load a list with individual values
-    std::list<int> aList = {1, 3, 4, 5, 66, 0};
+    list<int> aList = {1, 3, 4, 5, 66, 0};
     for (int val : aList)
         cout << val << "   ";
     cout << endl;
@@ -51,8 +50,8 @@ void loadListArray(){
     int arr[] = {-2, -1, 0, 1, 2};
 
     // use integer values
-    // Syntax:  std::list<<elem_type>> <name>(<arr_name>, <#_arr_elements)
-    std::list<int> aList(arr, arr + sizeof(arr) / sizeof(int));
+    // Syntax:  list<<elem_type>> <name>(<arr_name>, <#_arr_elements)
+    list<int> aList(arr, arr + sizeof(arr) / sizeof(int));
 
     for (int val : aList)
         cout << val << "   ";
@@ -60,24 +59,25 @@ void loadListArray(){
 }
 
 template <typename T>
-bool contains(std::list<T> & listOfElements, const T & element)
+bool contains(list<T> & listOfElements, const T & element)
 {
     // Find the iterator if element in list
-    auto it = std::find(listOfElements.begin(), listOfElements.end(), element);
+    auto it = find(listOfElements.begin(), listOfElements.end(), element);
     return it != listOfElements.end();
 }
 
 void testContains(){
     //  Does "quinn" exist?
-    std::list<std::string> dogs = {"karma", "46", "sara", "24", "quinn", "80"};
-    bool result = contains(dogs, std::string("quinn"));
+    list<string> dogs = {"karma", "46", "sara", "24", "quinn", "80"};
+    bool result = contains(dogs, string("quinn"));
     cout << "dogs contains 'quinn'?  "  << result;
 }
 
-void modifyNextElement(std::string look_for, int add_to){
+void modifyNextElement(string look_for, int add_to){
     // find an element then modify next
-    std::list<std::string> dogs = {"karma", "46", "sara", "24", "quinn", "80"};
-    std::list<std::string>::iterator p = dogs.begin();
+    list<string> dogs = {"karma", "46", "sara", "24", "quinn", "80"};
+    list<string>::iterator p = dogs.begin();
+
 
     cout << "\n\n" << "Original contents: ";
     p = dogs.begin();
@@ -96,7 +96,7 @@ void modifyNextElement(std::string look_for, int add_to){
         }
         if (go_for_next){
             cout << "adding " << add_to << " to existing value of " << *p << endl;
-            *p = std::to_string(std::stoi(*p) + add_to);
+            *p = to_string(stoi(*p) + add_to);
             break;
         }
         p++;
@@ -111,10 +111,10 @@ void modifyNextElement(std::string look_for, int add_to){
 }
 
 
-void insertElement(std::string add_name, std::string add_wt, int before_here){
+void insertElement(string add_name, string add_wt, int before_here){
     // Insert a new element
-    std::list<std::string> dogs = {"karma", "46", "sara", "24", "quinn", "80"};
-    std::list<std::string>::iterator p = dogs.begin();
+    list<string> dogs = {"karma", "46", "sara", "24", "quinn", "80"};
+    list<string>::iterator p = dogs.begin();
 
     cout << "\n\n" << "Original contents: ";
     p = dogs.begin();
@@ -125,7 +125,7 @@ void insertElement(std::string add_name, std::string add_wt, int before_here){
 
     cout << "\n" << "Before here:  " << before_here << endl;
     p = dogs.begin();
-    std::advance(p, before_here);
+    advance(p, before_here);
     dogs.insert(p, add_name);
     dogs.insert(p, add_wt);
 
@@ -140,9 +140,9 @@ void insertElement(std::string add_name, std::string add_wt, int before_here){
 
 void sortList(){
     // Insert a new element
-    std::list<std::string> dogs = {"karma", "46", "sara", "24", "quinn", "80"};
-    std::list<std::string> dogs_copy = dogs;
-    std::list<std::string>::iterator p = dogs.begin();
+    list<string> dogs = {"karma", "46", "sara", "24", "quinn", "80"};
+    list<string> dogs_copy = dogs;
+    list<string>::iterator p = dogs.begin();
 
     cout << "\n\n" << "Original contents: ";
     p = dogs.begin();

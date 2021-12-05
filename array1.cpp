@@ -1,11 +1,7 @@
 #include <iostream>
 #include <string>
-#include <valarray>
 
-using std::cout;
-using std::endl;
-
-// an array is just a 1-D homogenous collection of objects
+using namespace std; 
 
 void printArr(int arr[], int length){
      // an array is passed only by reference; no clue as to size
@@ -23,6 +19,8 @@ int main(){
 
     // This array 'self-sizes'
     int arr[] = {1, 2, 4};
+    int arr_arr[3];  // we can add values later
+    
     
     // Looping is a pain because sizeof(a) yields its total size in bytes
     for (int i=0; i<sizeof(arr)/sizeof(arr[0]); i++ ){
