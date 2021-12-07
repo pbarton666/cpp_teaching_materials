@@ -10,6 +10,7 @@ class GoatClass{
         // class attributes (private)
         string name;
         string color;        
+        string placeholder_color = "brown";
 
     public:
         // method (public)
@@ -21,7 +22,6 @@ class GoatClass{
         void setColor(string trial_color){
             if (trial_color != "white" && trial_color != "brown" && trial_color != "white"){
                 cout << "Sorry. " + trial_color + " is a stupid color for a goat." << endl;
-                string placeholder_color = "brown";
                 cout << "We're making it " + placeholder_color + ".\n";
                 color = placeholder_color;
             }

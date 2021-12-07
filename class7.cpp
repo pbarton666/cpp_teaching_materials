@@ -9,7 +9,7 @@ class MammalClass{
     // class attributes are private by default. 'mangled' versions are used here
     protected:
         bool warm_blooded_ = true;  // arctic ground squirrle is heterothermic
-    bool live_young_ = true;    // platypus lays eggs
+        bool live_young_ = true;    // platypus lays eggs
 
     public:
         // we may want to reserve exceptions for these traits; return mangled values

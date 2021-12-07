@@ -1,29 +1,31 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class Dog
 {
 private:
-    std::string name;
+    string name;
     int weight;
-    std::string toy;
+    string toy;
 
 public:
     // getters
-    std::string getName()  const { return name;   } 
+    string getName()  const { return name;   } 
     int   getWeight()  const  { return weight; }
-    std::string getToy()  const  { return toy; }
+    string getToy()  const  { return toy; }
 
     // setters
-    void  setName(std::string dogname) { name = dogname; }
+    void  setName(string dogname) { name = dogname; }
     void  setWeight(int dogweight) { weight = dogweight; }
-    void  setToy(std::string dogtoy)  { toy = dogtoy; }
+    void  setToy(string dogtoy)  { toy = dogtoy; }
         
     // constructor
     Dog(
-        std::string dogname,
+        string dogname,
         int dogweight,
-        std::string dogtoy
+        string dogtoy
         ):
         name(dogname), weight(dogweight), toy(dogtoy) {}
 
@@ -33,18 +35,18 @@ int main(){
     // make an instance of dog
     Dog quinn("Quinn", 123, "sock");
     
-    std::cout << quinn.getName() << std::endl;
-    std::cout << quinn.getWeight() << std::endl;
-    std::cout << quinn.getToy() << std::endl;
-    std::cout << "****" << std::endl;
+    cout << quinn.getName() << endl;
+    cout << quinn.getWeight() << endl;
+    cout << quinn.getToy() << endl;
+    cout << "****" << endl;
 
     quinn.setName("Quinn1");
     quinn.setWeight(12345);
     quinn.setToy("Squaky Squirrel");
     
-    std::cout << quinn.getName() << std::endl;
-    std::cout << quinn.getWeight() << std::endl;
-    std::cout << quinn.getToy() << std::endl;
+    cout << quinn.getName() << endl;
+    cout << quinn.getWeight() << endl;
+    cout << quinn.getToy() << endl;
     
     return 0;
 }

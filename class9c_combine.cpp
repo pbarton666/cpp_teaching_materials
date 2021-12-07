@@ -7,8 +7,8 @@ using std::cout;
 using std::endl;
 
 int main(){
-    IntRoutines int_routine_instance;
-    FloatRoutines float_routine_instance;
+    IntRoutines int_routine_instance;   // from 9a
+    FloatRoutines float_routine_instance;  // from 9b
 
     int result;
     result = int_routine_instance.addInts(3, 4);

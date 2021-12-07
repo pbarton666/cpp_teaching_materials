@@ -5,13 +5,7 @@
 #include <string>
 #include <algorithm>
 
-using std::vector;
-using std::cout;
-using std::endl;
-using std::string;
-using std::advance;
-using std::for_each;  //<algorithm>
-
+using namespace std;
 
 int main(){
     vector<string> v;
@@ -20,7 +14,7 @@ int main(){
     v.push_back("mary");
 
     // Index loop : works for strict sequences (not list, forward_list, etc.)    
-    for (std::size_t i = 0; i != v.size(); ++i) {
+    for (size_t i = 0; i != v.size(); ++i) {
         cout << v[i]  << endl;
        }
 
