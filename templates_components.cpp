@@ -3,13 +3,17 @@
 #include <vector>
 #include <iostream>
 
-/*
-    https://www.geeksforgeeks.org/c-magicians-stl-algorithms/?ref=lbp
+// Algorithms  https://en.cppreference.com/w/cpp/algorithm
+// Containers (vector, queue, etc.)
+// Functions (push_front, insert, beginm size, etc.)
+// Iterators (input, output, foreward, bidirectional, random access)
+
+/*  Algorithms
     non-manipulating
     sort(first_iterator, last_iterator) – To sort the given vector.
     reverse(first_iterator, last_iterator) – To reverse a vector.
-    *max_element (first_iterator, last_iterator) – To find the maximum element of a vector.
-    *min_element (first_iterator, last_iterator) – To find the minimum element of a vector.
+    max_element (first_iterator, last_iterator) – To find the maximum element of a vector.
+    min_element (first_iterator, last_iterator) – To find the minimum element of a vector.
     accumulate(first_iterator, last_iterator, initial value of sum) – Does the summation of vector elements
 
    count(first_iterator, last_iterator,x) – To count the occurrences of x in vector.

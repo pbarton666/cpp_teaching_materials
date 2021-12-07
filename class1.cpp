@@ -1,13 +1,15 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 // Basic class and class instances
 
 // create a class (really a 'template')
 class MyClass {                // name
     public:                    // access specifier
         int aNum;              //   declarations
-        std::string aString;
+        string aString;
 };                             // code block closes with a ';'
 
 int main(){
@@ -20,8 +22,8 @@ int main(){
     anotherObj.aString = "I an anotherObj!";
 
     // observer the separation of namespaces
-    std::cout << anObj.aString << " My number is: " << anObj.aNum << std::endl;
-    std::cout << anotherObj.aString << " My number is: " << anotherObj.aNum<< std::endl;
+    cout << anObj.aString << " My number is: " << anObj.aNum << endl;
+    cout << anotherObj.aString << " My number is: " << anotherObj.aNum<< endl;
     
     return 0;
 }

@@ -1,32 +1,28 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 //   Access specifiers can keep class members under wraps
 
 class GoatClass{
     private:
         // class attributes (private)
-        std::string name;
-        std::string color;        
-        
-        // constructor (private)
-        // GoatClass(std::string name_input, std::string color_input){
-        //     name = name_input;
-        //     color = color_input;            
-        // }
+        string name;
+        string color;        
 
     public:
         // method (public)
         void say_hi(){
-            std::cout << "Hi.  My name is " + name + ", a " + color + " goat." << std::endl;
+            cout << "Hi.  My name is " + name + ", a " + color + " goat." << endl;
         }
 
         // setter for color (public)
-        void setColor(std::string trial_color){
+        void setColor(string trial_color){
             if (trial_color != "white" && trial_color != "brown" && trial_color != "white"){
-                std::cout << "Sorry. " + trial_color + " is a stupid color for a goat." << std::endl;
-                std::string placeholder_color = "brown";
-                std::cout << "We're making it " + placeholder_color + ".\n";
+                cout << "Sorry. " + trial_color + " is a stupid color for a goat." << endl;
+                string placeholder_color = "brown";
+                cout << "We're making it " + placeholder_color + ".\n";
                 color = placeholder_color;
             }
             else {
@@ -34,17 +30,17 @@ class GoatClass{
             }
         }
         // getter for color (public) - internal method, so can access private members
-        std::string getColor(){
+        string getColor(){
             return color;
         }
 
         // setter for name (public)
-        void setName(std::string trial_name){
+        void setName(string trial_name){
             name = trial_name;
         }
 
         // getter for name (public)
-        std::string getName(){
+        string getName(){
             return name;
         }
 

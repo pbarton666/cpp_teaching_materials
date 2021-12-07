@@ -2,51 +2,37 @@
 #include <string>
 #include <exception>
 
-using std::endl;
-using std::cout;
-using std::cin;
-
-
-#include <iostream>
-#include <exception>
 using namespace std;
 
-class Base { virtual void dummy() {} };
-class Derived: public Base { int a; };
+int CORRECT = 20;
 
-int main_with_exception () {
-  try {
-    Base * pba = new Derived;
-    Base * pbb = new Base;
-    Derived * pd;
-
-    pd = dynamic_cast<Derived*>(pba);
-    if (pd==0) cout << "Null pointer on first type-cast.\n";
-
-    pd = dynamic_cast<Derived*>(pbb);
-    if (pd==0) cout << "Null pointer on second type-cast.\n";
-
-  } catch (exception& e) {cout << "Exception: " << e.what();}
-  return 0;
-}
-
-int main(){
-    int CORRECT = 20;
+int tester(int guess){
     try {
-        int guess = 15;
         if (guess == CORRECT) {
-            cout << "Yay!";
+            cout << "You guessed the correct answer: " << guess;
+            cout << " Yay!" << endl;
 
         // exception handling can happen in an else clause    
         } else {
+            cout << "Bummer, man.  "  ;
             throw (guess);  // this calls the catch block (just like any function)
             cout << "This line won't ever execute.";
         }
     }
 
     catch (int myNum) {  // this anticipates an integer.
-    cout << "I'll just give you this one:" << endl;
-    cout << "The correct answer is " <<  CORRECT << " You guessed: " << myNum << endl;
+      cout << "The correct answer is " <<  CORRECT << " You guessed: " << myNum << endl;
     } 
+
+    // possible to use multiple catch if overloaded
+    
+     return 0;
+
+}
+
+int main(){
+    tester(10);
+    tester(20);
     return 0;
+
 } 

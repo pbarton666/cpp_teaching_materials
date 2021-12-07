@@ -1,20 +1,22 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 // Add a constructor (function to set initial parameters)
 class GoatClass{
     public:
         // class method (doesn't return anything, hence 'void')
         void say_hi(){
-            std::cout << "Hi.  My name is " + name + ", a " + color + " goat." << std::endl;
+            cout << "Hi.  My name is " + name + ", a " + color + " goat." << endl;
         }
 
         // class attributes
-        std::string name;
-        std::string color;
+        string name;
+        string color;
 
         // constructor
-        GoatClass(std::string name_input, std::string color_input){
+        GoatClass(string name_input, string color_input){
             name = name_input;
             color = color_input;
         }
@@ -29,17 +31,17 @@ int main(){
     myWhiteGoat.say_hi();
 
     // From outside the class, the public members are available.  We can print them:
-    std::cout << "brown goat name is: " + myBrownGoat.name << std::endl;
-    std::cout << "white goat name is: " + myWhiteGoat.name << std::endl;
-    std::cout << "****\n";
-    std::cout << "brown goat color is: " + myBrownGoat.color << std::endl;
-    std::cout << "white goat color is: " + myWhiteGoat.color << std::endl;
-    std::cout << "****\n";
+    cout << "brown goat name is: " + myBrownGoat.name << endl;
+    cout << "white goat name is: " + myWhiteGoat.name << endl;
+    cout << "****\n";
+    cout << "brown goat color is: " + myBrownGoat.color << endl;
+    cout << "white goat color is: " + myWhiteGoat.color << endl;
+    cout << "****\n";
 
     // ... which is not always a great idea;
-    std::cout << "After a quick change ..." << std::endl;
+    cout << "After a quick change ..." << endl;
     myBrownGoat.color = "hot pink";
-    std::cout << "brown goat color is: " + myBrownGoat.color << std::endl;
+    cout << "brown goat color is: " + myBrownGoat.color << endl;
 
     return 0;
 }

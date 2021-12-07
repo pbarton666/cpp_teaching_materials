@@ -3,11 +3,12 @@
 #include <complex>
 #include <cmath>
 
-using std::cout;
-using std::cin;
-using std::endl;    
-using std::complex;
+using namespace std;
 
+/* Demonstrate new data type as exemplar of roll your own data structures */
+
+// Show these as all in main()
+// ... then move to functions as shown here
 
 void myTypedef(){
     typedef complex<double> dcomp;
@@ -18,10 +19,10 @@ void myComplex(){
     using namespace std::complex_literals;
     typedef complex<double> dcomp;
 
-    // dcomp comp1(2.3, 3.1);
-    // dcomp comp2 = 2.0 + 4.1i;
-    dcomp comp3 = 3. + .3i, comp4 = 4. + .4i;
-
+    dcomp comp1a(2.3, 3.1);
+    dcomp comp2a = 2.0 + 4.1i;
+    dcomp comp3a = 3. + .3i;
+    dcomp comp4a = 4. + .4i;
 
     dcomp comp1(3., 4.);
     dcomp comp2(2., 3.);

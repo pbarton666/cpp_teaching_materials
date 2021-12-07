@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 // Inheritance 
 
 class MammalClass{
@@ -21,10 +23,10 @@ class DogClass: public MammalClass{
     public:
         const int leg_count = 4;   // all dogs will have 4 legs
         int loyalty_score_ = 10;   // assumed loyalty is 10, but could change 
-        std::string dog_name_;     // dogs will get names, but we don't know what they are yet
+        string dog_name_;     // dogs will get names, but we don't know what they are yet
 
-        void setName(std::string name){ dog_name_ = name; }
-        std::string dog_name() const {return dog_name_;}
+        void setName(string name){ dog_name_ = name; }
+        string dog_name() const {return dog_name_;}
         void setLoyaltyScore(int loyalty){ loyalty_score_ = loyalty; }
         int loyalty_score() const {return loyalty_score_;}
     };
@@ -40,15 +42,15 @@ int main(){
     HuskyClass my_husky;
     my_husky.setName("Quinn");
 
-    std::cout << std::boolalpha;   //print 'true' and 'false'
+    cout << boolalpha;   //print 'true' and 'false'
 
-    std::cout << my_husky.dog_name() << std::endl;
-    std::cout << "warm blooded?  " << my_husky.warm_blooded() << std::endl;
-    std::cout << "live young?  " << my_husky.live_young() << std::endl ;
-    std::cout << "has hair?  " <<  my_husky.have_hair << std::endl;
-    std::cout << "sings blues?  " << my_husky.sings_blues << std::endl;
-    std::cout << "leg count?  " << my_husky.leg_count << std::endl ;
-    std::cout << "loyalty score?  " << my_husky.loyalty_score() << std::endl ;
+    cout << my_husky.dog_name() << endl;
+    cout << "warm blooded?  " << my_husky.warm_blooded() << endl;
+    cout << "live young?  " << my_husky.live_young() << endl ;
+    cout << "has hair?  " <<  my_husky.have_hair << endl;
+    cout << "sings blues?  " << my_husky.sings_blues << endl;
+    cout << "leg count?  " << my_husky.leg_count << endl ;
+    cout << "loyalty score?  " << my_husky.loyalty_score() << endl ;
 
 
     return 0;

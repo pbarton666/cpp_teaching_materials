@@ -1,16 +1,7 @@
 #include <iostream>
 #include <string>
 
-
-
-
-
-
-
-
-
-
-
+using namespace std;
 
 void pointer(){
     // show off some pointer tricks
@@ -21,11 +12,11 @@ void pointer(){
     i_pointer = &i;      //  assign the address (&) of i to the pointer
 
     // so what can we do?   Here's what we know:
-    std::cout << "Hi, my name is 'i'.  My value is " + std::to_string(i) << std::endl;
-    std::cout << "I live at:  " << std::hex << i_pointer << std::endl;
+    cout << "Hi, my name is 'i'.  My value is " + to_string(i) << endl;
+    cout << "I live at:  " << hex << i_pointer << endl;
 
     // let's say I don't know the value of i, just the pointer ...
-    std::cout << "Value of i from pointer is: " + std::to_string(*i_pointer) <<std::endl;
+    cout << "Value of i from pointer is: " + to_string(*i_pointer) <<endl;
 
     // we can change the value of i by resetting the contents of its address.  Here, we
     // assign the value of the de-referenced j_pointer to the de-referenced i_pointer.
@@ -34,13 +25,13 @@ void pointer(){
     j_pointer = &j;
 
     *i_pointer = *j_pointer;
-    std::cout << "Value of i is: " + std::to_string(i) <<std::endl;
-    std::cout << "Value of j is: " + std::to_string(j) <<std::endl;
+    cout << "Value of i is: " + to_string(i) <<endl;
+    cout << "Value of j is: " + to_string(j) <<endl;
  
      // we can make a new variable based on the value at the address of an existing one
     int n;
     n = *j_pointer;
-    std::cout << "Value of n is: " + std::to_string(n) <<std::endl;
+    cout << "Value of n is: " + to_string(n) <<endl;
 }
 
 int main(){
