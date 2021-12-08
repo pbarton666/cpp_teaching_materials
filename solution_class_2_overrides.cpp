@@ -64,6 +64,5 @@ int main(){
     siberian.setLoyaltyScore(9);
     cout << siberian.dog_name() << " has a loyalty score of: " << siberian.loyalty_score() << endl;
 
-
     return 0;
 }
