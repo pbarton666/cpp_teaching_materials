@@ -4,22 +4,14 @@
 #include <regex>
 
 // explicit short-hand access to libraries
-////using std::cout;
-//using std::endl;
-//using std::cin;
-//using std::ofstream;
-//using std::ifstream;
-//using std::fstream;
-////using std::string;
-//using std::flush;
-/*std::vector<std::string> string_split(const std::string& str) {
-	std::vector<std::string> result;
-	std::istringstream iss(str);
-	for (std::string s; iss >> s; )
-		result.push_back(s);
-	return result;
-}
-	*/
+using std::cout;
+using std::endl;
+using std::cin;
+using std::ofstream;
+using std::ifstream;
+using std::fstream;
+using std::string;
+using std::flush;
 
 using namespace std;
 

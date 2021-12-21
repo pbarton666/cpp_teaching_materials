@@ -6,7 +6,8 @@ using namespace std;
 int main()
 {
     string input;
-    regex integer_expr("(\\+|-)?[[:digit:]]+");
+    //regex integer_expr("(\\+|-)?[[:digit:]]+");
+    regex integer_expr("\\+|-\\d+");
     //As long as the input is correct ask for another number
     while(true)
     {

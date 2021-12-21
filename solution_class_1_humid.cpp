@@ -35,12 +35,12 @@ class RelHumid{
             }
             if (rh_int > 0 && rh_int <= 100) {
                 rh_ = rh_int;
-                vstore.push_back(stoi(rh));
+                vstore.push_back(int(stoi(rh)));
             }
         }
         void addRh(string rh){
             setRh(rh);
-            cout <<  "\nRH vector is now:  ";
+            cout <<  "\nRH vector is now:  " << endl;
             report(vstore);
         }
 };

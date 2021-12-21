@@ -4,7 +4,7 @@
 
    using namespace std;
 
-   void main(){
+   int main(){
    
         string lorem = "Lorem ipsum dolor sit amet, consectetur";
         string delimiter = " ";
@@ -22,4 +22,5 @@
 	    }
 
         cout << endl;
+        return 0;
    }

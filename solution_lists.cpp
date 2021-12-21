@@ -16,7 +16,7 @@ int main()
   for(i=0; i<10; i++) lst.push_back(i);
 
   cout << "Size = " << lst.size() << endl;
-
+// DRY   Don't Repeat Yourself
   cout << "Contents: ";
   list<int>::iterator p = lst.begin();
   while(p != lst.end()) {
